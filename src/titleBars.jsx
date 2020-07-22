@@ -11,7 +11,7 @@ const TitleBar = () => {
           </td>
           <td width='8' />
           <td>
-            <h4>The Movie Database</h4>
+            <h4>The Bingewatching Database</h4>
           </td>
         </tr>
       </tbody>
