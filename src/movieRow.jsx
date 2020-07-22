@@ -2,12 +2,28 @@ import React, { Component } from 'react';
 import './App.css';
 
 class MovieRow extends Component {
-  state = {};
+  constructor(props) {
+    super(props);
+    this.state = {
+      movieurl: ''
+    };
+    this.movieposter();
+  }
 
   viewMovie = () => {
     const url = 'https://www.themoviedb.org/movie/' + this.props.movie.id;
     window.location.href = url;
   };
+
+  movieposter = () => {
+    if (this.props.movie.poster_src !== 'http://image.tmdb.org/t/p/w185null') {
+      this.movieName = this.props.movie.poster_src;
+    } else {
+      this.movieName = 'defaultimage.png';
+    }
+    console.log(this.movieName);
+  };
+
   render() {
     return (
       <div class='col s12 m7' style={{ backgroundColor: 'black' }}>
@@ -17,8 +33,9 @@ class MovieRow extends Component {
         <div class='card horizontal' style={{ backgroundColor: 'black' }}>
           <div class='card-image'>
             <img
-              src={this.props.movie.poster_src}
+              src={this.movieName}
               alt={this.props.movie.title}
+              style={{ width: 200 }}
             />
           </div>
           <div class='card-stacked'>
