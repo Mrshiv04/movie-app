@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+
+.titleBar {
+  background-color: rgb(5, 5, 5);
+  display: block;
+  color: #fff;
+  padding-left: 16px;
+  padding: 0;
+}
