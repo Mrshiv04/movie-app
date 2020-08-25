@@ -27,9 +27,11 @@ class MovieRow extends Component {
   render() {
     return (
       <div class='col s12 m7' style={{ backgroundColor: 'black' }}>
-        <h2 class='header' style={{ color: 'rgb(245, 222, 80)' }}>
-          {this.props.movie.title}
-        </h2>
+        <a href={'https://www.themoviedb.org/movie/' + this.props.movie.id}>
+          <h2 class='header' style={{ color: 'rgb(245, 222, 80)' }}>
+            {this.props.movie.title}
+          </h2>
+        </a>
         <div class='card horizontal' style={{ backgroundColor: 'black' }}>
           <div class='card-image'>
             <img

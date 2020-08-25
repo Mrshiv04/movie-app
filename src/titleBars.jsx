@@ -7,7 +7,7 @@ const TitleBar = () => {
       <tbody>
         <tr>
           <td>
-            <img src='mdb.png' width='100' alt='IMDB icon'></img>
+            <a href = 'http://localhost:3000/'><img src='mdb.png' width='100' alt='IMDB icon'></img></a>
           </td>
           <td width='8' />
           <td>
